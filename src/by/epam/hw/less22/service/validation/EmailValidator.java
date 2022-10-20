@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class EmailValidator implements Validator {
 	private Matcher matcher;
 
-	private final String emailPattern = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+	private final String emailPattern = "([.[^@\\s]]+)@([.[^@\\s]]+)\\.([a-z]+)";
 	private final Pattern pattern = Pattern.compile(emailPattern);
 
 	@Override
